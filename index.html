@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="jquery.js"></script>
+   
+</head>
+<body>
+    <h1>Hello JQuery!</h1>
+    <a href="https://www.google.com" id="google">Google</a>
+    <a href="https://www.facebook.com">Facebook</a>
+    <a href="https://www.twiter.com" class="twit">Twiter</a>
+    
+    <form class="form">
+        <legend>My Form</legend>    
+        <div>
+            <label for="name">Name</label>
+            <input type="text" id="input" placeholder="Enter the name...">
+        </div>       
+    
+        <button type="button" id="button" title="Please click on the button!">Submit</button>
+    </form>
+    
+    <script>
+        $(document).ready(function(){
+            $("h1").css('color', 'blue').css('textAlign','center');            
+            $("a[href]").css('color', 'green').css('target','_blank').css('textDecoration', 'none').css('fontSize', '20px').css('textTransform', 'uppercase').css('marginRight', '10px');
+            $(".form").css('border','2px dotted blue').css('textAlign', 'center');
+            $("#button").click(function () {
+                alert(document.getElementById('input').value);
+            });            
+        });
+    </script>
+</body>
+</html>
